@@ -1,5 +1,5 @@
 import React from 'react'
-import './HomePage.css';
+import './Homepage.css';
 
 function HomePage() {
   return (
@@ -7,54 +7,50 @@ function HomePage() {
         <div className = 'header'></div>
 
         <div className = 'body'>
-            <div className = 'menu'>
-                <div className = 'menuContent'>
-                    <div className = 'userInfo'>
-                        <div className = "userID">TM</div>
-                        <div className = "username">Taisia Mertz</div>
-                    </div>
+            <div className = 'sideBar'>
+                <div className = 'userInfo'>
+                    <div className = 'userIcon'>TM</div>
 
-                    <hr class="line1"/> 
-                    <div className = "dashboard">Dashboard</div>
-                    <div className = "option1">Option 2</div>
-                    <div className = "option2">Option 3</div>
-                    <hr class="line2"/> 
-                    <div className = "option4">Option 4</div>
-                    <div className = "option5">Option 5</div>
-                    <div className = "option6">Option 6</div>
+                    <div className = 'userText'>
+                        <div className = 'username'>Taisia Mertz</div>
+                        <div className = 'userStatus'>
+                            <div className = 'statusIcon'></div>
+                            <div className = 'statusText'>Online</div>
+                        </div>
+                    </div>
                 </div>
+
+                    <hr class = 'dividerOne'/>
+                    
+                    <div className = 'buttons'>
+                        <button className = 'button buttonOne'>Dashboard</button>
+                        <button className = 'button buttonTwo'>Option Two</button>
+                        <button className = 'button buttonThree'>Option Three</button>
+                        <hr class = 'dividerTwo'/>
+                        <button className = 'button buttonOne'>Option Four</button>
+                        <button className = 'button buttonTwo'>Option Five</button>
+                        <button className = 'button buttonThree'>Option Six</button>
+                    </div>
             </div>
 
-            <div className = 'content'>
-                <div className = 'subContent1'>
-                    <div className = 'card1'>
-                        <div className = 'icon1'></div>
+            <div className = 'cards'>
+                <div className = 'left'>
+                    <div className = 'top'>
+                        <div className = 'card card1'></div>
+                        <div className = 'card card2'></div>
+                        <div className = 'card card3'></div>
                     </div>
-                    <div className = 'card2'>
-                        <div className = 'icon1'></div>
+                    <div className = 'middle'>
+                        <div className = 'card card4'></div>
+                        <div className = 'card card5'></div>
                     </div>
-                    <div className = 'card3'>
-                        <div className = 'icon1'></div>
+                    <div className = 'bottom'>
+                        <div className = 'card card6'></div>
+                        <div className = 'card card7'></div>
                     </div>
                 </div>
-
-                <div className = 'subContent2'>
-                    <div className = 'subContent2_1'>
-                        <div className = 'subContent2_1_1'>
-                            <div className = 'card1'></div>
-                            <div className = 'card2'></div>
-                        </div>
-
-                        <div className = 'subContent2_1_2'>
-                            <div className = 'card1'></div>
-                            <div className = 'card2'></div>
-                        </div>
-                    </div>
-
-                    <div className = 'subContent2_2'>
-                        <div className = 'card1'></div>
-                        <div className = 'card2'></div>
-                    </div>
+                <div className = 'right'>
+                    <div className = 'card card8'></div>
                 </div>
             </div>
         </div>
