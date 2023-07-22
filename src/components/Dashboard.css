@@ -1,0 +1,210 @@
+.homepageOutput {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    flex: 0;
+    width: 100%;
+    background: #040D16;
+}
+
+.body {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.sideBar {
+    height: 100%;
+    background: #161F29;
+    flex: 0.15;
+    /* box-shadow: inset 0 0 0 1px red; */
+}
+
+.sideBar .userInfo {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+.sideBar .userInfo .userIcon {
+    display: flex;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background: #2A2D3E;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.sideBar .userInfo .userText {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sideBar .userInfo .userText .userStatus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+.sideBar .userInfo .userText .userStatus .statusIcon {
+    background: rgb(120, 255, 120);
+    border-radius: 50%;
+    width: 0.7vw;
+    height: 0.7vw;
+    margin-right: 5px;
+}
+
+.sideBar .userInfo .userText .userStatus .statusText {
+    font-size: 0.9vw;
+}
+
+.sideBar .userInfo .userText .username {
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.body .sideBar .dividerOne {
+    border: none;
+    border-top: 0.5px solid #7a7fae;
+    width: 100%; 
+    height: 0.1px; 
+    margin: 10px auto;
+    margin-bottom: 6vh;
+}
+
+.body .sideBar .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1vw;
+}
+
+.body .sideBar button {
+    display: flex;
+    flex-direction: column;
+    background: #161F29;
+    border: none;
+    color: #767A9B;
+    margin-bottom: 4vh;
+    font-size: 0.75em;
+}
+
+.body .sideBar .buttons .dividerTwo {
+    border: none;
+    border-top: 0.5px solid #7a7fae;
+    width: 95%; 
+    height: 0.1px;
+    margin-top: 2vh;
+    margin-bottom: 6vh; 
+}
+
+.cardsOuter {
+    height: 100%;
+    flex: 0.85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #212332;
+}
+
+.cardsInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97%;
+    width: 98%;
+    flex-direction: row;
+}
+
+.card, .cardInner {
+    box-sizing: border-box;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #2A2D3E;
+    border-radius: 35px;
+}
+
+
+.cardsInner .left {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cardsInner .left .top {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.cardsInner .left .middle {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+}
+
+.cardsInner .left .middle .card4 {
+    flex: 3;
+}
+
+.cardsInner .left .middle .card5 {
+    flex: 1;
+}
+
+.cardsInner .left .bottom {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.cardsInner .left .bottom .card6 {
+    flex: 3;
+}
+
+.cardsInner .left .bottom .card7 {
+    flex: 2;
+}
+
+.cardsInner .right {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.cardsInner .right .card8 {
+    flex: 1;
+    display: flex;
+}

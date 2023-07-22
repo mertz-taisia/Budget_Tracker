@@ -1,0 +1,19 @@
+.budgetBarsOut {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .innerBarsContainer {
+    width: 90%;
+    height: 90%;
+    box-shadow: inset;
+    /* outline: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

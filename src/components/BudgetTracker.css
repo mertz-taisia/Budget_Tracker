@@ -1,0 +1,374 @@
+.cardsOuterBudget {
+    height: 100%;
+    flex: 0.85;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #212332;
+}
+
+.innerTopBudget {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background: green; */
+}
+
+.topBudget {
+    display: flex;
+    width: 100%;
+    height: 95%;
+}
+
+.innerTopBudget {
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+
+.bottomBudget {
+    flex: 6;
+    width: 100%;
+    display: flex;
+}
+
+.card1Budget {
+    flex: 1;
+}
+
+.card2Budget {
+    flex: 1;
+}
+
+.card3Budget {
+    flex: 1;
+}
+
+.leftBudget {
+    flex: 1;
+    height: 82vh;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; /* Added this line to position the pseudo-element */
+}
+
+.leftBudget::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1px; /* This is the 'border' thickness */
+    background-color: rgb(177, 195, 210);
+}
+
+
+.newTransaction {
+    flex: 1.5;
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.newTransactionInner {
+    /* flex: 1; */
+    width: 95%;
+    /* background: green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addTransactionLabel {
+    color: rgb(177, 195, 210);
+}
+
+.addTransaction {
+    background: #308AB9;
+    height: 1.5vw;
+    width: 2.5vw;
+    font-size: 1.25em;
+    border: transparent;
+    color: aliceblue;
+    border-radius: 35px;
+    /* display: flex; */
+    text-align: center;
+    margin-right: 0.5vw;
+}
+
+.leftBudgetInner {
+    flex: 15;
+    background: #12181F;
+    /* background: red; */
+    overflow-y: auto;
+    width: 100%;
+}
+
+.transactionBlock {
+    flex: 1;
+    background: #212332;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.transactionBlockInner {
+    display: flex;
+    /* background: red; */
+    width: 95%;
+    height: 65%;
+}
+
+.stripeIndicator {
+    flex: 1.25;
+    display: flex;
+    align-items: center;
+    /* background: pink; */
+}
+
+.stripeIndicatorInner {
+    display: flex;
+    background: #308AB9;
+    width: 30%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.transactionDetails {
+    flex: 30;
+    /* background: purple; */
+}
+
+.transactionTitle {
+    color: white;
+    font-size: 1.35em;
+}
+
+.transactionCategory {
+    color: #308AB9;
+    font-size: 0.85em;
+}
+
+.transactionAmountWrapper {
+    flex: 5;
+    text-align: right;
+    /* background: green; */
+}
+
+.transactionAmountValue {
+    color: #78C679;
+    font-size: 0.95em;
+}
+
+.positive {
+    color: #78C679;
+}
+
+.negative {
+    color: #FF6384;
+}
+
+.rightBudget {
+    flex: 2;
+    height: 100%;
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Added this line to position the pseudo-element */
+}
+
+.rightBudget::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1px; /* This is the 'border' thickness */
+    background-color: rgb(177, 195, 210);
+}
+
+.transactionSelection {
+    flex: 1;
+    /* background: #212332; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    outline: none;
+}
+
+.transactionSelectionInner {
+    display: flex;
+    /* background: red; */
+    width: 90%;
+    height: 65%;
+}
+
+.stripe {
+    flex: 2.5;
+    display: flex;
+    align-items: center;
+    /* background: pink; */
+}
+
+.stripeInner {
+    display: flex;
+    background: #308AB9;
+    width: 30%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.selectionContent {
+    flex: 30;
+    /* background: purple; */
+}
+
+.selectionTitle {
+    color: white;
+    font-size: 1em;
+}
+
+.selectionCategory {
+    color: #308AB9;
+    font-size: 0.65em;
+}
+
+.selectionAmount {
+    flex: 8;
+    text-align: right;
+    font-size: 0.95em;
+    /* background: green; */
+}
+
+.transactionSelectionContent {
+    flex: 3.5;
+    background: #2A2D3E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.transactionSelectionContentInner {
+    display: flex;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+}
+
+.transactionInfoLabelContainer {
+    flex: 1;
+    display: flex;
+    color: grey;
+    /* background: blue; */
+}
+
+.dateLabel {
+    flex: 0.5;
+    /* background: green; */
+    text-align: center;
+}
+
+.descriptionLabel {
+    flex: 3;
+    margin-left: 3vw;
+}
+
+.amountLabel {
+    flex: 0.5;
+    /* background: green; */
+    text-align: center;
+}
+
+.transactionInfoContent {
+    flex: 9;
+    display: flex;
+    flex-direction: row;
+}
+
+.dateContent {
+    flex: 0.5;
+    /* background: green; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.dateFormat {
+    /* background: blue; */
+    background: #212332;
+    box-shadow: inset 0 0 0 0.5px #83D4FF;
+    width: 80%;
+    height: 25%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    line-height: 1.05;
+}
+
+.month {
+    font-size: 1em;
+    margin: 0;
+}
+
+.day {
+    font-size: 2.1em;
+    margin: 0;
+}
+
+.year {
+    font-size: 0.95em;
+    margin: 0;
+}
+
+.descriptionContent {
+    flex: 3;
+    margin-left: 3vw;
+}
+
+.titleInfo {
+    /* background: red; */
+    color: white;
+    font-size: 0.95em;
+}
+
+.descriptionInfo {
+    font-size: 0.85em;
+    color: grey;
+}
+
+.amountContent {
+    flex: 0.5;
+    /* background: green; */
+    text-align: center;
+}
+
+.leftBudgetInner::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leftBudgetInner::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.leftBudgetInner::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0); 
+    border-radius: 10px;
+}
+
+.leftBudgetInner:hover::-webkit-scrollbar-thumb {
+    background-color: white; 
+}
