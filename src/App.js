@@ -4,7 +4,6 @@ import Dashboard from './components/Dashboard.js';
 import BudgetTrackerPage from './components/BudgetTrackerPage.js';
 import ExpenseTrackerPage from './components/ExpenseTrackerPage.js';
 
-
 import FinancialGoalsPage from './components/FinancialGoalsPage.js';
 import Option5Page from './components/Option5Page.js';
 import FinancialHistoryPage from './components/FinancialHistoryPage.js';

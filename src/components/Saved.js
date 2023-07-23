@@ -1,6 +1,6 @@
 import React from 'react'
 import './Saved.css';
-import savedIcon from '../../images/saved_icon.PNG';
+import savedIcon from '../images/saved_icon.PNG';
 
 function Saved() {
     let saved = 350;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Remaining.css';
-import spentIcon from '../../images/spent_icon.PNG';
+import spentIcon from '../images/spent_icon.PNG';
 
 function Remaining() {
   let remaining = 700;

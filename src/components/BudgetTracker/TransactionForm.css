@@ -1,0 +1,140 @@
+.newTransactionOutput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #2A2D3E;
+}
+
+.newTransactionOutputTop {
+    background: #212332;
+    /* background: red; */
+    flex: 1.5;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.confirmTransaction {
+    background: aliceblue;
+    height: 2vw;
+    width: 2vw;
+    font-size: 1.2em;
+    border: transparent;
+    color: black;
+    border-radius: 35px;
+    text-align: center;
+    margin-right: 0.75vw;
+}
+
+.cancelTransaction {
+    background: #308AB9;
+    height: 2vw;
+    width: 2vw;
+    font-size: 1.2em;
+    border: transparent;
+    color: white;
+    border-radius: 35px;
+    text-align: center;
+    margin-right: 0.75vw;
+}
+
+.newTransactionOutputBottom {
+    flex: 15;
+    width: 95%;
+}
+
+.transForm {
+    display: flex;
+    flex-direction: column;
+    color: #B0B0B0;
+}
+
+.titleInput {
+    background: #212332;
+    color: #B0B0B0;
+    height: 5vh;
+    border: none;
+}
+
+.categoryAndType {
+    display: flex;
+    flex-direction: row;
+}
+
+.categoryDivider {
+    flex: 4 ;
+    display: flex;
+    flex-direction: column;
+}
+
+.typeDivider {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryInput {
+    background: #212332;
+    color: #B0B0B0;
+    height: 5vh;
+    border: none;
+}
+
+.typeInput {
+    background: #212332;
+    color: #B0B0B0;
+    height: 5vh;
+    border: none;
+}
+
+
+.descriptionInput {
+    background: #212332;
+    color: #B0B0B0;
+    height: 15vh;
+    border: none;
+}
+
+.dateAndAmount {
+    display: flex;
+    flex-direction: row;
+}
+
+.dateDivider {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.amountDivider {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.dateInput {
+    background: #212332;
+    color: #B0B0B0;
+    height: 5vh;
+    border: none;
+}
+
+.amountInput {
+    background: #212332;
+    color: #B0B0B0;
+    height: 5vh;
+    border: none;
+}
+
+label {
+    color: #B0B0B0;
+}
+
+input {
+    color: #B0B0B0;
+}

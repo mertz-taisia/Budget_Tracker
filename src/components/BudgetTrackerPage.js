@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './BudgetTracker.css';
 import { useNavigate } from 'react-router-dom';
-import Budget from './Dashboard/Budget.js'
-import Saved from './Dashboard/Saved.js';
-import Remaining from './Dashboard/Remaining.js';
-import workInProgress from '../images/work_in_progress_icon.PNG';
+import Budget from './Budget.js'
+import Saved from './Saved.js';
+import Remaining from './Remaining.js';  
+import TransactionForm from './BudgetTracker/TransactionForm.js'
 
 function HomePage() {
 
@@ -176,23 +176,54 @@ function HomePage() {
       navigate('/financial-history');
     };
 
+    const cancelTransaction = () => {
+      console.log("canceled");
+      setDisplayComponent(prev => !prev);
+      setdisplayNewComponentButton(true);
+    };
+
+    const handleFormSubmit = (formData) => {
+      console.log('Form data submitted:', formData);
+      setdisplayNewComponentButton(true);
+
+      // Create a new transaction object from the form data
+      const newTransaction = {
+        title: formData.title,
+        category: formData.category,
+        description: formData.description,
+        date: formData.date,
+        amount: formData.amount,
+      };
+
+      // Update the transactions list by adding the new transaction
+      const updatedTransactions = [...transactions, newTransaction];
+
+      // Sort the updated transactions by date in descending order
+      updatedTransactions.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      // Update the state with the new transactions list and selected transaction
+      setTransactions(updatedTransactions);
+      setSelectedTransaction(newTransaction);
+
+      // Toggle the display of the component and the new component button
+      setDisplayComponent(prev => !prev);
+      setdisplayNewComponentButton(true);
+    };
+
     const [displayComponent, setDisplayComponent] = useState(false);
+    const [displayNewComponentButton, setdisplayNewComponentButton] = useState(true);
 
     const NewTransaction = () => <div className="rightBudget" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <img
-        className="workInProgress"
-        style={{ width: '20%' }} 
-        src={workInProgress}
-        alt="workInProgress Icon"
-      />
+      <TransactionForm cancelNewTrans = {cancelTransaction} onSubmit={handleFormSubmit}  />
     </div>;
 
     const newTransClick = () => {
       setDisplayComponent(prev => !prev);
+      setdisplayNewComponentButton(false);
     };
 
 
-    let transactions = dat[0].goals[0].transactions;
+    const [transactions, setTransactions] = useState(dat[0].goals[0].transactions);
       
     // Sort the transactions by date in descending order.
     transactions.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -257,7 +288,9 @@ function HomePage() {
                   <div className = 'newTransaction'>
                     <div className='newTransactionInner'>
                       <div className = 'addTransactionLabel'>TRANSACTION</div>
-                      <button className = 'addTransaction' onClick={newTransClick}>+</button>
+                      {displayNewComponentButton && (
+                        <button className='addTransaction' onClick={newTransClick}>+</button>
+                      )}
                     </div>
                   </div>
                   <div className = 'leftBudgetInner'>

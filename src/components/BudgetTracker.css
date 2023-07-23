@@ -31,6 +31,7 @@
     flex: 6;
     width: 100%;
     display: flex;
+    /* background: red; */
 }
 
 .card1Budget {
@@ -47,8 +48,7 @@
 
 .leftBudget {
     flex: 1;
-    height: 82vh;
-    /* background: red; */
+    height: 83vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -69,7 +69,8 @@
 .newTransaction {
     flex: 1.5;
     width: 100%;
-    /* background: red; */
+    /* height: 100%;
+    background: blue; */
     display: flex;
     align-items: center;
     justify-content: right;
@@ -85,6 +86,32 @@
     justify-content: space-between;
 }
 
+.newTransTop {
+    /* background: blue; */
+    background: #212332;
+    flex: 1.47;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.newTransBottom {
+    /* background: red; */
+    background: #2A2D3E;
+    flex: 15;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newTransBottomInner {
+    /* background: green; */
+    width: 95%;
+    height: 95%;
+}
+
 .addTransactionLabel {
     color: rgb(177, 195, 210);
 }
@@ -97,15 +124,37 @@
     border: transparent;
     color: aliceblue;
     border-radius: 35px;
-    /* display: flex; */
     text-align: center;
     margin-right: 0.5vw;
+}
+
+.confirmTransaction {
+    background: aliceblue;
+    height: 2.1vw;
+    width: 2.1vw;
+    font-size: 1.3em;
+    border: transparent;
+    color: black;
+    border-radius: 35px;
+    text-align: center;
+    margin-right: 0.75vw;
+}
+
+.cancelTransaction {
+    background: #308AB9;
+    height: 2.1vw;
+    width: 2.1vw;
+    font-size: 1.3em;
+    border: transparent;
+    color: white;
+    border-radius: 35px;
+    text-align: center;
+    margin-right: 0.75vw;
 }
 
 .leftBudgetInner {
     flex: 15;
     background: #12181F;
-    /* background: red; */
     overflow-y: auto;
     width: 100%;
 }

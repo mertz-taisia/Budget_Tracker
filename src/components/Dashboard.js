@@ -4,9 +4,9 @@ import './Dashboard.css';
 import Transactions from './Dashboard/Transactions.js';
 import Goals from './Dashboard/Goals.js';
 import Category from './Dashboard/Category.js';
-import Budget from './Dashboard/Budget.js'
-import Saved from './Dashboard/Saved.js';
-import Remaining from './Dashboard/Remaining.js';
+import Budget from './Budget.js'
+import Saved from './Saved.js';
+import Remaining from './Remaining.js';
 import BudgetBar from './Dashboard/BudgetBar.js';
 import LineChartComponent, { MyChart } from './Dashboard/LineChartComponent.js';
 import { useHistory } from 'react-router-dom';

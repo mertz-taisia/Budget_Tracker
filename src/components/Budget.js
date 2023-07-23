@@ -1,6 +1,6 @@
 import React from 'react'
 import './Budget.css';
-import budgetIcon from '../../images/budget_icon.PNG';
+import budgetIcon from '../images/budget_icon.PNG';
 
 
 function Budget() {
