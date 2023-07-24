@@ -63,8 +63,8 @@ function HomePage() {
                     
             <div className = 'buttons'>
                 <button className = 'button buttonOne' onClick={navigateToDashboard}>DASHBOARD</button>
-                <button className = 'button buttonTwo' onClick={navigateToBudgetTracker}>BUDGET TRACKER</button>
                 <button className = 'button buttonThree' onClick={navigateToExpenseTracker}>EXPENSE TRACKER</button>
+                <button className = 'button buttonTwo' onClick={navigateToBudgetTracker}>BUDGET TRACKER</button>
                 <hr class = 'dividerTwo'/>
                 <button className = 'button buttonOne' onClick={navigateToFinancialGoals}>FINANCIAL GOALS</button>
                 <button className = 'button buttonTwo' onClick={navigateToOption5}>OPTION FIVE</button>
