@@ -45,7 +45,8 @@
 
 .newTransactionOutputBottom {
     flex: 15;
-    width: 95%;
+    width: 90%;
+    /* background: red; */
 }
 
 .transForm {
@@ -92,7 +93,6 @@
     border: none;
 }
 
-
 .descriptionInput {
     background: #212332;
     color: #B0B0B0;
@@ -133,6 +133,7 @@
 
 label {
     color: #B0B0B0;
+    font-size: 0.9em;
 }
 
 input {

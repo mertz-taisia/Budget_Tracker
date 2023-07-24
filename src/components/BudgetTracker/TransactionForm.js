@@ -1,41 +1,82 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TransactionForm.css';
 
 const TransactionForm = ({ onSubmit, cancelNewTrans }) => {
+  const today = new Date().toISOString().split('T')[0]; 
+
   const [formData, setFormData] = useState({
     title: '',
     category: '',
+    type: '',
     description: '',
-    date: '',
+    date: today, 
     amount: null,
   });
+
+  useEffect(() => {
+    // Function to get the user's local timezone offset in minutes
+    function getTimezoneOffset() {
+      const now = new Date();
+      return now.getTimezoneOffset();
+    }
+
+    // Function to calculate the date based on the user's local timezone
+    function getLocalDate() {
+      const now = new Date();
+      const offsetInMinutes = getTimezoneOffset();
+      return new Date(now.getTime() - offsetInMinutes * 60 * 1000).toISOString().split('T')[0];
+    }
+
+    // Set the initial value of the date field to the user's local date
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      date: getLocalDate(),
+    }));
+  }, []);
 
   const cancelTransaction = () => {
     cancelNewTrans();
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Call the onSubmit function with the form data when the form is submitted
-    onSubmit(formData);
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    
+      // If the type is "Expense", swap the sign of the amount value
+      const modifiedAmount = formData.type === 'Expense' ? -formData.amount : formData.amount;
 
-    // Clear the form data after submission
-    setFormData({
-      title: '',
-      category: '',
-      description: '',
-      date: '',
-      amount: null,
-    });
-  };
+      console.log(formData.type)
+    
+      // Prepare the data to be submitted without the "type" field
+      const dataToSubmit = {
+        title: formData.title,
+        category: formData.category,
+        description: formData.description,
+        date: formData.date,
+        amount: modifiedAmount,
+      };
+    
+      // Call the onSubmit function with the data to be submitted
+      onSubmit(dataToSubmit);
+    
+      // Clear the form data after submission
+      setFormData({
+        title: '',
+        category: '',
+        type: '', // You may want to reset the "type" field as well
+        description: '',
+        date: today, 
+        amount: null,
+      });
+    };
+    
 
   return (
     <form className='newTransactionOutput' onSubmit={handleSubmit}>
@@ -73,13 +114,13 @@ const TransactionForm = ({ onSubmit, cancelNewTrans }) => {
               <label>Type</label>
               <select name="type"
                 className='typeInput'
-                value={formData.category}
+                value={formData.type}
                 onChange={handleInputChange}
                 required
               >
                 <option value="">Select a transaction type</option>
-                <option value="Category 1">Expense</option>
-                <option value="Category 2">Earning</option>
+                <option value="Expense">Expense</option>
+                <option value="Earning">Earning</option>
               </select>
             </div>
           </div>
@@ -112,6 +153,8 @@ const TransactionForm = ({ onSubmit, cancelNewTrans }) => {
                 className='amountInput'
                 value={formData.amount}
                 onChange={handleInputChange}
+                min="0"
+                step="any"
                 required
               />
             </div>
